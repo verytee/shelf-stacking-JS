@@ -1,14 +1,20 @@
-fruits = ["🍌", "🍏", "🍊", "🍌", "🍌", "🍏", "🍊", "🍏", "🍊", "🍊", "🍏", "🍌"]; 
+// 1. Access the DOM elements and store them in variables:
+const appleShelf = document.getElementById("apple-shelf");
+const orangeShelf = document.getElementById("orange-shelf");
+const bananaShelf = document.getElementById("banana-shelf");
 
-for (let fruit of fruits) { 
-    if (fruit === "🍌") { 
-        document.querySelector("#banana-shelf").textContent += fruit; 
-    } 
-        else if (fruit === "🍊") { 
-            document.querySelector("#orange-shelf").textContent += fruit; 
-        } 
-        else if (fruit === "🍏") { 
-            document.querySelector("#apple-shelf").textContent += fruit; 
-        } 
-            else { console.log(`${fruit} goes in the bin 🗑️`); 
-        } }
+const fruits = ["🍌", "🍏", "🍊", "🍌", "🍌", "🍏", "🍊", "🍏", "🍊", "🍊", "🍏", "🍌"];
+
+for (let i = 0; i < fruits.length; i++) {
+    let fruit = fruits[i];
+
+    if (fruit === "🍏") {
+        appleShelf.textContent += fruit;
+    } else if (fruit === "🍊") {
+        orangeShelf.textContent += fruit;
+    } else if (fruit === "🍌") {
+        bananaShelf.textContent += fruit;
+    } else {
+        console.log("This goes in the bin!");
+    }
+}
