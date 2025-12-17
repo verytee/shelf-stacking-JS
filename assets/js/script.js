@@ -1,6 +1,6 @@
 fruits = ["🍌", "🍏", "🍊", "🍌", "🍌", "🍏", "🍊", "🍏", "🍊", "🍊", "🍏", "🍌"]; 
 
-for (const fruit of fruits) { 
+for (let fruit of fruits) { 
     if (fruit === "🍌") { 
         document.querySelector("#banana-shelf").textContent += fruit; 
     } 
